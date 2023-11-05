@@ -3,7 +3,6 @@ C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Deb
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\SCD_Frontend.pdb
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.csproj.AssemblyReference.cache
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.csproj.SuggestedBindingRedirects.cache
-C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.Form1.resources
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.Properties.Resources.resources
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.csproj.GenerateResource.cache
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.csproj.CoreCompileInputs.cache
@@ -38,3 +37,5 @@ C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Deb
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\Microsoft.IdentityModel.Logging.xml
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.LoginForm.resources
+C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.AdminForm.resources

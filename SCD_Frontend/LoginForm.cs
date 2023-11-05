@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace SCD_Frontend
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -25,12 +25,16 @@ namespace SCD_Frontend
                  role = JwtDecoderService.GetRoleFromJwt(authResponse);
             }
 
-            if (authResponse == "Authentication failed" || role != "ADMIN")
+            if (authResponse == "Authentication failed!" || role != "ADMIN")
             {
-                MessageBox.Show("Authentication failed");
+                MessageBox.Show("Authentication failed!");
             } else
             {
-                MessageBox.Show("Authentication sucessfull");
+                MessageBox.Show("Authentication sucessfull!");
+                AdminForm adminForm = new AdminForm(authResponse);
+                adminForm.ShowDialog();
+                this.Close();
+
             }
 
         }

@@ -36,7 +36,7 @@ namespace SCD_Frontend.services
             catch (FormatException)
             {
                 Console.WriteLine("Invalid Base64-encoded payload.");
-            }
+            } 
 
             try
             {
