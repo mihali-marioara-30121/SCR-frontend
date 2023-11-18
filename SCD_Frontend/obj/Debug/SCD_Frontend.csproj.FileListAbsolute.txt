@@ -39,3 +39,5 @@ C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Deb
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.LoginForm.resources
 C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\obj\Debug\SCD_Frontend.AdminForm.resources
+C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Marioara\OneDrive\Desktop\SCD\Proiect\SCD_Frontend\SCD_Frontend\bin\Debug\Newtonsoft.Json.xml

@@ -41,6 +41,7 @@
             this.username_textBox.Name = "username_textBox";
             this.username_textBox.Size = new System.Drawing.Size(209, 22);
             this.username_textBox.TabIndex = 0;
+            this.username_textBox.Text = "adminubun";
             // 
             // password_textBox
             // 
@@ -49,6 +50,7 @@
             this.password_textBox.PasswordChar = '*';
             this.password_textBox.Size = new System.Drawing.Size(209, 22);
             this.password_textBox.TabIndex = 1;
+            this.password_textBox.Text = "admin";
             // 
             // username_label
             // 
@@ -78,7 +80,7 @@
             this.login_button.UseVisualStyleBackColor = true;
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +90,7 @@
             this.Controls.Add(this.username_label);
             this.Controls.Add(this.password_textBox);
             this.Controls.Add(this.username_textBox);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

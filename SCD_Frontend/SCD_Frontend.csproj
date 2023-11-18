@@ -48,6 +48,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.7.0.3\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -101,6 +104,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\Department.cs" />
+    <Compile Include="models\DepartmentDTO.cs" />
+    <Compile Include="models\DepartmentVO.cs" />
+    <Compile Include="models\Employee.cs" />
+    <Compile Include="services\DepartmentService.cs" />
     <Compile Include="services\JwtDecoderService.cs" />
     <Compile Include="services\LoginService.cs" />
     <Compile Include="models\LoginRequest.cs" />

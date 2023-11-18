@@ -30,7 +30,7 @@ namespace SCD_Frontend
                 MessageBox.Show("Authentication failed!");
             } else
             {
-                MessageBox.Show("Authentication sucessfull!");
+               
                 AdminForm adminForm = new AdminForm(authResponse);
                 adminForm.ShowDialog();
                 this.Close();
