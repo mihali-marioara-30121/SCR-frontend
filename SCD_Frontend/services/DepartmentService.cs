@@ -11,7 +11,38 @@ namespace SCD_Frontend.services
 {
     internal class DepartmentService
     {
-        public List<DepartmentVO> GetAllDepartments(string apiUrl, string jwtToken)
+
+        public List<Department> GetAllDepartments(string apiUrl, string jwtToken)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+
+                    HttpResponseMessage response = client.GetAsync(apiUrl).Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = response.Content.ReadAsStringAsync().Result;
+                        List<Department> departments = JsonConvert.DeserializeObject<List<Department>>(responseBody);
+                        return departments;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Exception: {ex.Message}");
+                    return null;
+                }
+            }
+        }
+
+        public List<DepartmentVO> GetAllParentDepartments(string apiUrl, string jwtToken)
         {
             using (HttpClient client = new HttpClient())
             {

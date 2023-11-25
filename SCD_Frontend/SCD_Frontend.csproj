@@ -108,7 +108,9 @@
     <Compile Include="models\DepartmentDTO.cs" />
     <Compile Include="models\DepartmentVO.cs" />
     <Compile Include="models\Employee.cs" />
+    <Compile Include="models\EmployeeRequest.cs" />
     <Compile Include="services\DepartmentService.cs" />
+    <Compile Include="services\EmployeeService.cs" />
     <Compile Include="services\JwtDecoderService.cs" />
     <Compile Include="services\LoginService.cs" />
     <Compile Include="models\LoginRequest.cs" />
