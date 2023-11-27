@@ -22,6 +22,7 @@ namespace SCD_Frontend
         private string currentSelectedEmployeeId;
 
         List<Department> departments;
+        List<Employee> managersofDepartment;
         List<Employee> employeesOfDepartment;
         List<DepartmentVO> allHeadDepartmentsWithChildren;
         public AdminForm(string jwt)
@@ -87,7 +88,16 @@ namespace SCD_Frontend
             if (parent_textBox.Text.Length > 0)
             {
                 Department parentDepartment = departmentService.findByName(DEPARTMENT_BY_NAME_ENDPOINT, parent_textBox.Text.ToString(), JWT);
-                parentId = parentDepartment.id;
+                if (parentDepartment !=null)
+                {
+                    parentId = parentDepartment.id;
+                }
+                else 
+                { 
+                    MessageBox.Show("The parent department doesn't exist!");
+                    return; 
+                }
+                
             }
 
             departmentService.createNewDepartment(CREATE_DEPARTMENT_ENDPOINT, newDepartment, parentId, JWT);
@@ -270,14 +280,24 @@ namespace SCD_Frontend
                     Department department = departments.Where(dep => dep.name.Equals(department_textBox.Text.ToString())).First();
                     departmentId = department.id;
 
+          
+
             if (manager_textBox.Text.Length < 1)
             {
                 managerId = 0;
             } else
-            {
+            { 
                 List<Employee> managers
                     = employeeService.GetManagersByDepartment(department_textBox.Text.ToString(), MANAGERS_BY_DEPARTMENT_ENDPOINT, JWT);
+               
+                bool managerExists = managers.Where(man => man.name.Equals(manager_textBox.Text.ToString())).Any();
+                if (!managerExists)
+                {
+                    MessageBox.Show("Manager doesn't exist!");
+                    return;
+                }
                 managerId = managers.Where(man => man.name.Equals(manager_textBox.Text.ToString())).First().id;
+
             }
             EmployeeRequest request = new EmployeeRequest();
             request.name = employeeName;
@@ -306,6 +326,14 @@ namespace SCD_Frontend
 
         private void delete_employee_button_Click(object sender, EventArgs e)
         {
+            Boolean isAnyEmployeeSelected = currentSelectedItemId != null;
+
+            if (!isAnyEmployeeSelected)
+            {
+                MessageBox.Show("No employee selected for deletion!");
+                return;
+            }
+            
             // daca elementul selectat este manager atunci afisam mesaj de eroare ca nu poate fi sters, ci doar schimbat
             Employee employee = employeesOfDepartment.Where(em => em.id == long.Parse(currentSelectedEmployeeId)).FirstOrDefault(); 
             if (employee.manager == null) {
